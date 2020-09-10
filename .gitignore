@@ -1,0 +1,32 @@
+# Игнорировать папку other
+/other
+# Игнорировать папку slick
+/slick
+
+# Игнорировать в папке css файлы
+# бутстрап
+/css/bootstrap.css
+/css/bootstrap.css.map
+/css/bootstrap.min.css
+/css/bootstrap.min.css.map
+/css/bootstrap-theme.css
+/css/bootstrap-theme.css.map
+/css/bootstrap-theme.min.css
+/css/bootstrap-theme.min.css.map
+
+# слайдера
+/css/owl.carousel.min.css
+/css/owl.theme.default.min.css
+
+
+# Игнорировать в папке js файлы
+
+# слайдера
+/js/owl.carousel.js
+
+# бутстрап
+/js/bootstrap.js
+/js/bootstrap.min.js
+
+# jquery
+/js/jquery-3.4.1.min.js
