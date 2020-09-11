@@ -1,70 +1,35 @@
- // Owl Carousel
-$(function() {
-   var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 4,
-    margin: 10,
-    loop: true,
-    nav: true
-  });
-});
-
-// slick
-
- $('.slider-single').slick({
- 	slidesToShow: 1,
- 	slidesToScroll: 1,
- 	arrows: true,
- 	fade: false,
- 	adaptiveHeight: true,
- 	infinite: false,
-	useTransform: true,
- 	speed: 400,
- 	cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+ //slick
+ $('.content_top-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: false,
+  adaptiveHeight: true,
+  infinite: false,
+  useTransform: true,
+  speed: 400,
+  cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
  });
 
-  $('.slider-nav')
- 	.on('init', function(event, slick) {
- 		$('.slider-nav .slick-slide.slick-current').addClass('is-active');
- 	})
- 	.slick({
- 		slidesToShow: 7,
- 		slidesToScroll: 7,
- 		dots: false,
- 		focusOnSelect: false,
- 		infinite: false,
- 		responsive: [{
- 			breakpoint: 1024,
- 			settings: {
- 				slidesToShow: 5,
- 				slidesToScroll: 5,
- 			}
- 		}, {
- 			breakpoint: 640,
- 			settings: {
- 				slidesToShow: 4,
- 				slidesToScroll: 4,
-			}
- 		}, {
- 			breakpoint: 420,
- 			settings: {
- 				slidesToShow: 3,
- 				slidesToScroll: 3,
-		}
- 		}]
- 	});
 
- $('.slider-single').on('afterChange', function(event, slick, currentSlide) {
- 	$('.slider-nav').slick('slickGoTo', currentSlide);
- 	var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
- 	$('.slider-nav .slick-slide.is-active').removeClass('is-active');
- 	$(currrentNavSlideElem).addClass('is-active');
- });
+ // ajax
 
- $('.slider-nav').on('click', '.slick-slide', function(event) {
- 	event.preventDefault();
- 	var goToSingleSlide = $(this).data('slick-index');
+ function ajax_transport_to_server() { // функция отправки данных (ajax)
+	 var formData = new FormData(document.forms.name_form);
+	 console.dir(formData); // что там отправляем то?
+	 var xhr = new XMLHttpRequest(); //создаем объект
+	 xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { //проверяем ответ на ошибки 
+            	// если норм то выводим
+                document.getElementById("result").innerHTML = this.responseText;
+            }
+            else
+            {
+            	// если нет сообщаем об ошибке
+            	document.getElementById("result").innerHTML = "Error";
+            }	
+        };
+     xhr.open("POST", "/controller.php"); // post запрос на конкретный контроллер
+     xhr.send(formData); //отпраляем данные
 
- 	$('.slider-single').slick('slickGoTo', goToSingleSlide);
- });
-
+}

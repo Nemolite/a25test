@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .main {
 	width: 100%;
 	height: 100%;
-	max-width: 1170px;
+	max-width: 1197px;
 	margin: 0 auto;
 
 }
@@ -51,14 +51,85 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .main__head {
 	position: relative;
 	width: 100%;
-	max-width: 1197px;
-	height: 70px;
+	height: auto;
 	background-color: #000;
 
 }
 
+.fix-color {
+	background-color: #000;
+	margin-bottom: 0px;
+}
 
+.fix-menu {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
 
+.fix-brand {
+	width: 200px;
+	height: 75px;
+
+}
+
+.fix-brand img {
+	width: 100%;
+	height: 100%;
+	margin-left: 75px;
+}
+
+.fix-nav {
+	margin-top: 10px;
+	margin-right: 75px;
+
+}
+
+.fix-nav > li > a{
+	color: #fff;
+	
+}
+
+.nav > li > a:hover, 
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #222;
+    color: #1E6BAD;
+    height: 100%;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #4BB891;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #87CD80;
+}
 
 
 /*------------ header finish---------*/
@@ -67,8 +138,106 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .content {
 	width: 100%;
 	min-height: 100%;
-	padding-bottom: 90px;
+	padding-bottom: 40px;
+
 }
+
+.content_top {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.content_top-slider {
+	width: 100%;
+	height: 350px;
+	padding-top: 50px;
+}
+
+.slider-text {
+	width: 100%;
+	height: 100%;
+}
+
+.slider-text h1,
+.info-text h1,
+.footer-text h1
+ {
+	font-size: 26px;
+	font-family: "Exo2BoldItalic",sans-serif;
+	display: block;
+	width: 191px;
+	height: auto;
+	font-style:italic;
+}
+
+
+.slider-text p {
+	font-family: "Exo2BoldItalic",sans-serif;
+	display: block;
+	width: 130px;
+	height: auto;
+
+	
+}
+
+.content_top-image {
+	width: 100%;
+	height: 350px;
+
+}
+
+.content_top-image img {
+	width: 100%;
+	height: 100%;
+	
+}
+
+.content_main {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	
+}
+
+.info-text {
+	width: 100%;
+	height: auto;
+	
+}
+
+.info-text p {
+	display: block;
+	width: 70%;
+	height: auto;
+	font-style:italic;
+	
+}
+
+.content_form {
+	width: 30%;
+	height: 250px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.content_form h2{
+	text-align: center;
+	font-weight:bold;
+	font-size: 20px;
+}
+
+.fix-btn {
+	width: 95%;
+	height: auto;
+	margin-left: 10px;
+	
+}
+
+.form-group input {
+	margin-top: 10px;
+}
+
 
 
 /*------------ content finish---------*/
@@ -77,12 +246,97 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .main__footer {
 	position: relative;
 	width: 100%;
-	height: 195px;
+	height: auto;
 	margin-top: -50px;
 	padding-top: 2px;
 	background-color: #000;
 }
 
+.footer-text {
+	width: 100%;
+	height: auto;
+	color:#fff;
+	font-style:italic;
 
+}
+
+.fix-magin-left {
+	padding-left: 242px;
+	padding-right: 150px;
+}
+
+.fix-magin-right {
+	padding-left: 10px;
+	padding-right: 250px;
+}
 
 /****** footer finish*******/
+
+/***** адаптация******/
+
+@media only screen and (min-width : 992px) and (max-width : 1200px) {
+
+.fix-magin-left {
+	padding-left: 242px;
+	padding-right: 150px;
+}
+
+.fix-magin-right {
+	padding-left: 10px;
+	padding-right: 250px;
+}
+ 
+
+} /*@media only screen and (min-width : 992px) and (max-width : 1200px)*/
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+   .fix-magin-left {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.fix-magin-right {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -85px;
+}
+
+.fix-nav {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.content_form {
+	width: 40%;
+	height: 250px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+} /*	@media only screen and (min-width : 768px) and (max-width : 991px)*/
+
+
+@media only screen and (max-width : 767px) {
+
+   .fix-magin-left {
+	padding-left: 50px;
+	padding-right: 150px;
+}
+
+.fix-magin-right {
+	padding-left: 50px;
+	padding-right: 150px;
+}
+
+.content_form {
+	width: 50%;
+	height: 250px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+} /*	@media only screen and (max-width : 750px)*/
